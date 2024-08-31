@@ -1,0 +1,302 @@
+@charset "utf-8";
+:root{
+    --font-family: 'Rubik', sans-serif;
+    --font-size: 16px;
+
+    --black: #030712;
+    --gray-900: #111827;
+    --gray-800: #1F2937;
+    --gray-700: #374151;
+    --gray-600: #4B5563;
+    --gray-500: #6B7280;
+    --gray-400: #9CA3AF;
+    --gray-300: #D1D5DB;
+    --gray-200: #E5E7EB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+    --white: #FFFFFF;
+
+    --primary: #1D4ED8;
+    --primary-medium: #3B82F6;
+    --primary-light: #DBEAFE;
+
+    --secondary: #C2410C;
+    --secondary-medium: #F97316;
+    --secondary-light: #FFEDD5;
+
+    --success: #22c55e;
+    --success-medium: #86efac;
+    --success-light: #f0fdf4;
+
+    --warning: #eab308;
+    --warning-medium: #fde047;
+    --warning-light: #fefce8;
+
+    --negative: #EF4444;
+    --negative-medium: #FCA5A5;
+    --negative-light: #FEF2F2;
+    
+    --br: 0.5rem;
+    --indent-large: 5rem;
+    --indent-medium: 1.25rem;
+    --indent-light: 0.375rem;
+}
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+    position: relative;
+}
+body{ 
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--black);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+body.stop-scrolling{
+    overflow: hidden;
+}
+.page{
+    flex: 1 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+footer{
+    flex: 0 0 auto;
+    position: relative;
+}
+.container{
+    padding-left: calc(50% - 680px);
+    padding-right: calc(50% - 680px);
+}
+.indent{
+    margin-top: var(--indent-large);
+}
+hr{
+    margin: var(--indent-medium) 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 1px solid #ddd;
+}
+/* uikit */
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.25rem;
+}
+h3{
+    font-size: 1.75rem;
+}
+h4{
+    font-size:1.5rem;
+}
+h5{
+    font-size:1.25rem;
+}
+h6{
+    font-size:1.125rem;
+}
+small {
+    font-size: 0.875rem;
+}
+.tiny{
+    font-size: 0.75rem;
+}
+.uppercase{
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+button{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: var(--br);
+    padding: 0 1.5rem;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+button:is(:focus, :hover, :active){
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+button.primary{
+    color: var(--white);
+    background-color: var(--primary);
+}
+button:is(:focus, :hover, :active){
+    color: var(--white);
+    background-color: var(--secondary);
+}
+input[type="text"]{
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: var(--br);
+    border: 1px solid var(--gray-400);
+    padding-left: 0.5rem;
+}
+input[type="text"]:is(:focus, :hover){
+    border-color: var(--primary);
+}
+input[type="text"]:focus{
+    outline: 1.2px solid var(--primary);
+}
+input::placeholder{
+    color: var(--gray-400);
+}
+select{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: var(--br);
+    border: 1px solid var(--gray-400);
+    padding-left: 0.5rem;
+    appearance: none;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat right 10px center;
+}
+select:is(:focus, :hover){
+    border-color: var(--primary);
+}
+select:focus{
+    outline: 1.2px solid var(--primary);
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    font-size: 1rem;
+    border-radius: var(--br);
+    border: 1px solid var(--gray-400);
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+textarea:is(:focus, :hover){
+    border-color: var(--primary);
+}
+textarea:focus{
+    outline: 1.2px solid var(--primary);
+}
+label{
+    font-weight: 500;
+}
+label svg{
+    display: none;
+}
+svg.icon-required{
+    width: 16px;
+    height: 16px;
+    stroke: var(--negative);
+}
+.input-friends{
+    display: flex;
+    flex-direction: column;
+    gap: var(--indent-light);
+}
+.input-friends:has(:is(input, textarea, select):required) label svg{
+    display: inline;
+}
+.input-friends:has(input:is([type=checkbox], [type=radio])){
+    flex-direction: row;
+}
+input:is([type=checkbox], [type=radio]){
+    accent-color: var(--primary);
+}
+.group{
+    display: flex;
+    flex-direction: column;
+    gap: var(--indent-medium);
+}
+/* uikit */
+/* popap */
+.popap{ 
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    backdrop-filter: blur(15px);
+    overflow: auto;
+}
+.popap.active{
+    display: flex;
+}
+.form__block{
+    max-width: 800px;
+    padding: calc(var(--indent-medium)*2);
+    border-radius: var(--br);
+    position: relative;
+    display: none;
+    flex-direction: column;
+    background-color: var(--white);
+    overflow: auto;
+    max-height: calc(100vh - 40px);
+}
+.form__block.active{
+    display: flex;
+}
+.popap__close{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+.popap__close:hover{
+    color: var(--primary);
+}
+
+/*header*/
+header{
+    width: 100%;
+    background-color: var(--white);
+}
+header.active {
+    position: fixed;
+    top: 0;
+    animation: slideInDown .5s ease;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+    /* transition: 2s; */
+}
+/*header*/
+
+/* form */
+/* form */
+
+/* screens */
+@media screen and (max-width: 1368px){
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 1200px){
+}
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 520px){
+}
+/* screens */
