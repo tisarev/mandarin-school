@@ -1,9 +1,9 @@
 @charset "utf-8";
 :root{
-    --font-family: 'Rubik', sans-serif;
+    --font-family: "Raleway", sans-serif;
     --font-size: 16px;
 
-    --black: #030712;
+    --black: #000000;
     --gray-900: #111827;
     --gray-800: #1F2937;
     --gray-700: #374151;
@@ -16,13 +16,9 @@
     --gray-50: #F9FAFB;
     --white: #FFFFFF;
 
-    --primary: #1D4ED8;
-    --primary-medium: #3B82F6;
-    --primary-light: #DBEAFE;
+    --primary: #FD6500;
 
-    --secondary: #C2410C;
-    --secondary-medium: #F97316;
-    --secondary-light: #FFEDD5;
+    --secondary: #F6DA67;
 
     --success: #22c55e;
     --success-medium: #86efac;
@@ -36,7 +32,7 @@
     --negative-medium: #FCA5A5;
     --negative-light: #FEF2F2;
     
-    --br: 0.5rem;
+    --br: 0.75rem;
     --indent-large: 5rem;
     --indent-medium: 1.25rem;
     --indent-light: 0.375rem;
@@ -72,8 +68,11 @@ footer{
     position: relative;
 }
 .container{
-    padding-left: calc(50% - 680px);
-    padding-right: calc(50% - 680px);
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+}
+.container-left{
+    padding-left: calc(50% - 720px);
 }
 .indent{
     margin-top: var(--indent-large);
@@ -87,7 +86,10 @@ hr{
 }
 /* uikit */
 h1{
-    font-size: 3rem;
+    font-size: 2.75rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
 }
 h2{
     font-size: 2.25rem;
@@ -270,17 +272,112 @@ input:is([type=checkbox], [type=radio]){
 /*header*/
 header{
     width: 100%;
-    background-color: var(--white);
 }
 header.active {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     animation: slideInDown .5s ease;
+    background-color: var(--white);
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
     /* transition: 2s; */
 }
 /*header*/
-
+/* hero */
+.hero{
+    width: calc(100% - 1.5rem);
+    max-width: 1920px;
+    margin: 0.75rem auto 0;
+    background: linear-gradient(225deg, #ff9a44 0%, #e72027 100%);
+    border-radius: calc(var(--br) * 2);
+    overflow: hidden;
+}
+.header-top{
+    display: flex;
+}
+.logo{
+    margin-right: auto;
+}
+nav.header-menu ul{
+    display: flex;
+    gap: 4px;
+    margin-top: 36px;
+}
+nav.header-menu ul li{
+    font-weight: bold;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+nav.header-menu ul li a{
+    display: inline-block;
+    color: var(--white);
+    padding: 10px 20px 9px;
+    border-radius: calc(var(--br) * 2);
+    line-height: 1;
+}
+nav.header-menu ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+nav.header-menu ul li:last-child a{
+    background-color: var(--secondary);
+    color: var(--black);
+}
+.hero-block{
+    display: flex;
+    gap: 20px
+}
+.hero-block__text{
+    width: calc(100% - 721px);
+}
+.hero-block img{
+    width: 701px;
+    height: auto;
+}
+.hero-block__text{
+    color: var(--white);
+    margin-top: 50px;
+}
+.hero-block__text-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+.hero-block__text-item{
+    background-color: var(--white);
+    border-radius: calc(var(--br) * 2);
+    padding: 24px;
+    font-weight: bold;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-wrap: balance;
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    transition: .5s;
+    transform: translateY(0);
+}
+.hero-block__text-item:hover{
+    transform: translateY(-10px);
+}
+.hero-block__text-item .hero-block__text-item__img{
+    margin-bottom: 12px;
+    width: 60px;
+    height: 60px;
+}
+.hero-block__text-item:nth-child(1) .hero-block__text-item__img{
+    background: url('../img/wired-outline-45-clock-time.gif') 0 0 no-repeat; 
+    background-size: cover;
+}
+.hero-block__text-item:nth-child(2) .hero-block__text-item__img{
+    background: url('../img/wired-outline-981-consultation.gif') 0 0 no-repeat; 
+    background-size: cover;
+}
+.hero-block__text-item:nth-child(3) .hero-block__text-item__img{
+    background: url('../img/wired-outline-27-globe.gif') 0 0 no-repeat; 
+    background-size: cover;
+}
+/* hero */
 /* form */
 /* form */
 
