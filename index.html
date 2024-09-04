@@ -29,19 +29,19 @@
                     <nav class="header-menu">
                         <ul>
                             <li>
-                                <a href="#menu">Форматы обучения</a>
+                                <a href="#home-format">Форматы обучения</a>
                             </li>
                             <li>
-                                <a href="#menu">Для всех возростов</a>
+                                <a href="#home-all-ages">Для всех возростов</a>
                             </li>
                             <li>
-                                <a href="#menu">Подготовка к HSK</a>
+                                <a href="#home-services__item1">Подготовка к HSK</a>
                             </li>
                             <li>
-                                <a href="#menu">Английский + Китайский</a>
+                                <a href="#home-services__item2">Английский + Китайский</a>
                             </li>
                             <li>
-                                <a href="#menu">Записаться</a>
+                                <a href="#contacts-form">Записаться</a>
                             </li>
                         </ul>
                     </nav>
@@ -145,36 +145,50 @@
                 <h2>Для всех возрастов</h2>
                 <div class="home-all-ages__list">
                     <div class="home-all-ages__item">
-                        <img src="./img/all-ages-1.svg">
-                        <h3>Детям</h3>
-                        <p>Продолжительность: <b>30 минут</b></p>
-                        <p>Цена: <b>от 600 ₽</b></p>
-                        <a href="#contacts-form" class="btn-primary">Записаться</a>
-                        <button class="popap__btn" data-path="popap">Попробовать</button>
+                        <div class="home-all-ages__item-img"><img src="./img/all-ages-1.svg"></div>
+                        <div class="home-all-ages__item-text">
+                            <h3>Детям</h3>
+                            <p>Продолжительность: <b>30 минут</b></p>
+                            <p>Цена: <b>от 600 ₽</b></p>
+                        </div>
+                        <div class="home-all-ages__item-button">
+                            <a href="#contacts-form" class="btn-primary">Записаться</a>
+                            <button class="popap__btn" data-path="popap">Попробовать</button>
+                        </div>
                     </div>
                     <div class="home-all-ages__item">
-                        <img src="./img/all-ages-2.svg">
-                        <h3>Подросткам</h3>
-                        <p>Продолжительность: <b>55 минут</b></p>
-                        <p>Цена: <b>от 850 ₽</b></p>
-                        <a href="#contacts-form" class="btn-primary">Записаться</a>
-                        <button class="popap__btn" data-path="popap">Попробовать</button>
+                        <div class="home-all-ages__item-img"><img src="./img/all-ages-2.svg"></div>
+                        <div class="home-all-ages__item-text">
+                            <h3>Подросткам</h3>
+                            <p>Продолжительность: <b>55 минут</b></p>
+                            <p>Цена: <b>от 850 ₽</b></p>
+                        </div>
+                        <div class="home-all-ages__item-button">
+                            <a href="#contacts-form" class="btn-primary">Записаться</a>
+                            <button class="popap__btn" data-path="popap">Попробовать</button>
+                        </div>
                     </div>
                     <div class="home-all-ages__item">
-                        <img src="./img/all-ages-3.svg">
-                        <h3>Взрослым</h3>
-                        <p>Продолжительность: <b>55 минут</b></p>
-                        <p>Цена: <b>от 950 ₽</b></p>
-                        <a href="#contacts-form" class="btn-primary">Записаться</a>
-                        <button class="popap__btn" data-path="popap">Попробовать</button>
+                        <div class="home-all-ages__item-img"><img src="./img/all-ages-3.svg"></div>
+                        <div class="home-all-ages__item-text">
+                            <h3>Взрослым</h3>
+                            <p>Продолжительность: <b>55 минут</b></p>
+                            <p>Цена: <b>от 950 ₽</b></p>
+                        </div>
+                        <div class="home-all-ages__item-button">
+                            <a href="#contacts-form" class="btn-primary">Записаться</a>
+                            <button class="popap__btn" data-path="popap">Попробовать</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="container section indent" id="home-services">
             <div class="home-services">
-                <div class="home-services__item">
-                    <div class="home-services__item-image"></div>
+                <div class="home-services__item" id="home-services__item1">
+                    <div class="home-services__item-image">
+                        <img src="./img/services__item2.svg">
+                    </div>
                     <div class="home-services__item-text">
                         <h2>Подготовка к HSK</h2>
                         <p><b>HSK (Hànyǔ shuǐpíng kǎoshì)</b> — это тест на уровень владения китайским языком для носителей других языков. Подготовка к HSK требует систематического подхода. Этот курс поможет студентам уверенно подготовиться к экзамену HSK и достичь желаемого уровня владения китайским языком.</p>
@@ -195,15 +209,15 @@
                         </ul>
                     </div>
                 </div>
-                <div class="home-services__item">
+                <div class="home-services__item indent" id="home-services__item2">
                     <div class="home-services__item-image">
-                        <img src="">
+                        <img src="./img/services__item.svg">
                     </div>
                     <div class="home-services__item-text">
                         <h2>Английский + Китайский</h2>
                         <p>Изучение английского и китайского языков открывает новые возможности в учебе и карьере. Английский — международное средство общения в бизнесе и науке, а китайский — доступ к богатой культуре и быстро развивающейся экономике.</p>
                         <p>Этот комбинированный курс поможет студентам развить навыки общения на английском и китайском языках, что откроет новые возможности в учебе и карьере.</p>
-                        <button class="popap__btn btn-primary" data-path="popap">Узнать больше про курс</button>
+                        <button class="popap__btn btn-primary mt-2" data-path="popap">Узнать больше про курс</button>
                     </div>
                 </div>
             </div>
