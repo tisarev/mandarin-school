@@ -83,3 +83,38 @@ function cookies() {
 let year = new Date().getFullYear()
   document.querySelector(".year").innerHTML = year;
 });
+//tabs
+const tabs = document.querySelector('.tabs');
+const tabButtons = tabs.querySelectorAll('[role="tab"]');
+const tabPanels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
+const tabImages = Array.from(tabs.querySelectorAll('[role="tabimage"]'));
+
+function handleClick(e) {
+  tabPanels.forEach((panel) => {
+    panel.hidden = true;
+  });
+  tabImages.forEach((panel) => {
+    panel.hidden = true;
+  });
+  tabButtons.forEach((tab) => {
+    tab.setAttribute('aria-selected', false);
+  });
+
+  e.currentTarget.setAttribute('aria-selected', true);
+  const id = e.currentTarget.id;
+
+  const tabPanel = tabPanels.find(panel => {
+    if (panel.getAttribute('aria-labelledby') === id) {
+      return true;
+    }
+  });
+  const tabImage = tabImages.find(image => {
+    if (image.getAttribute('aria-labelledby') === id) {
+      return true;
+    }
+  });
+
+  tabPanel.hidden = false;
+  tabImage.hidden = false;
+}
+tabButtons.forEach(button => button.addEventListener('click', handleClick));

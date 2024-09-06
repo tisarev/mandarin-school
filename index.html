@@ -79,16 +79,16 @@
         </section>
         <section class="container section indent" id="home-format">
             <div class="home-format">
-                <h2>Форматы обучения</h2>
-                <div class="home-format__wrapper">
+                <div class="home-format__wrapper tabs">
                     <div class="home-format__wrapper-left">
-                        <div class="home-format__tab-link">
-                            <div class="tab-link__item">Мини-группа</div>
-                            <div class="tab-link__item">Вдвоем</div>
-                            <div class="tab-link__item">Индивидуально</div>
+                        <h2>Форматы обучения</h2>
+                        <div role="tablist" class="home-format__tab-link">
+                            <button role="tab" aria-selected="true" class="tab-link__item" id="miniGroup">Мини-группа</button>
+                            <button role="tab" aria-selected="false" class="tab-link__item" id="together">Вдвоем</button>
+                            <button role="tab" aria-selected="false" class="tab-link__item" id="individually">Индивидуально</button>
                         </div>
                         <div class="home-format__tab-content">
-                            <div class="tab-link__item">
+                            <div role="tabpanel" aria-labelledby="miniGroup" class="tab-link__item">
                                 <p>Занятия в группе помогают развивать навыки общения и уверенность в своих силах. В групповых занятиях часто проводятся ролевые игры и обсуждения, что помогает применять язык в практических ситуациях.</p>
                                 <p>Студенты получают мгновенную обратную связь от преподавателя и одногруппников, что способствует быстрому исправлению ошибок и улучшению языка.</p>
                                 <ul class="list">
@@ -100,7 +100,7 @@
                                 </ul>
                                 <a href="#contacts-form" class="btn-primary">Попробовать</a>
                             </div>
-                            <div class="tab-link__item">
+                            <div role="tabpanel" aria-labelledby="together" hidden class="tab-link__item">
                                 <p>Хотите учиться вместе с другом или членом семьи? Как известно, наличие языкового партнера помогает поддерживать мотивацию и дисциплину, а также преодолевать трудности.</p>
                                 <p>Вместе вы можете быстрее проходить материал, так как обсуждения и практические задания становятся более динамичными. На занятиях будут использованы разные методы обучения: игры, ролевые ситуации, обсуждения, что делает занятия более увлекательными.</p>
                                 <ul class="list">
@@ -112,7 +112,7 @@
                                 </ul>
                                 <a href="#contacts-form" class="btn-primary">Попробовать</a>
                             </div>
-                            <div class="tab-link__item">
+                            <div role="tabpanel" aria-labelledby="individually" hidden class="tab-link__item">
                                 <p>Преподаватель адаптирует программу обучения под ваши нужды, интересы и уровень подготовки. На занятиях вы будете уделять больше внимания тем аспектам языка, которые вызывают у вас трудности, будь то грамматика, произношение и словарный запас.</p>
                                 <p>Собираетесь в командировку Китай? Преподаватель разберет с вами необходимые фразы и лексику, чтобы вы более уверенно чувствовали себя, находясь в Поднебесной.</p>
                                 <ul class="list">
@@ -127,13 +127,13 @@
                         </div>
                     </div>
                     <div class="home-format__wrapper-right">
-                        <div class="home-format__tab-image">
+                        <div role="tabimage" aria-labelledby="miniGroup" class="home-format__tab-image">
                             <img src="./img/tab-image-1.svg">
                         </div>
-                        <div class="home-format__tab-image">
+                        <div role="tabimage" aria-labelledby="together" hidden class="home-format__tab-image">
                             <img src="./img/tab-image-2.svg">
                         </div>
-                        <div class="home-format__tab-image">
+                        <div role="tabimage" aria-labelledby="individually" hidden class="home-format__tab-image">
                             <img src="./img/tab-image-3.svg">
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                         </div>
                         <div class="home-all-ages__item-button">
                             <a href="#contacts-form" class="btn-primary">Записаться</a>
-                            <button class="popap__btn" data-path="popap">Попробовать</button>
+                            <button class="popap__btn" data-path="popap1">Попробовать</button>
                         </div>
                     </div>
                     <div class="home-all-ages__item">
@@ -165,7 +165,7 @@
                         </div>
                         <div class="home-all-ages__item-button">
                             <a href="#contacts-form" class="btn-primary">Записаться</a>
-                            <button class="popap__btn" data-path="popap">Попробовать</button>
+                            <button class="popap__btn" data-path="popap2">Попробовать</button>
                         </div>
                     </div>
                     <div class="home-all-ages__item">
@@ -177,7 +177,7 @@
                         </div>
                         <div class="home-all-ages__item-button">
                             <a href="#contacts-form" class="btn-primary">Записаться</a>
-                            <button class="popap__btn" data-path="popap">Попробовать</button>
+                            <button class="popap__btn" data-path="popap3">Попробовать</button>
                         </div>
                     </div>
                 </div>
@@ -275,10 +275,35 @@
     <!-- <button class="popap__btn" data-path="popap">button</button> -->
     <!-- popap -->
     <div class="popap">
-        <div class="form__block" data-popap="popap">
+        <div class="form__block" data-popap="popap1">
             <div class="popap__close">×</div>
             <div class="form__content">
-                <h2>Заголовок</h2>
+                <h2>Детям </h2>
+                <p>Эта программа для деток от 4 до 10 лет. Главные принципы курса - применение игр, интерактивных подходов, практик повторения для вовлечения детей в изучение языка.</p>
+                <p>Вместе с нашими учителями детки познакомятся с тонами, пиньинем и узнают базовые иероглифы. Мы вместе познакомимся с культурой и традициями Китая. </p>
+                <p>Данный курс - важная ступень для успешного изучения языка в более взрослом возрасте.</p>
+
+            </div>
+        </div>
+        <div class="form__block" data-popap="popap2">
+            <div class="popap__close">×</div>
+            <div class="form__content">
+                <h2>Подросткам </h2>
+                <p>Эта программа для подростков от 10 до 17 лет. Данный курс поможет развить базовые навыки чтения, письма, аудирования и говорения на китайском языке, заложить базу для успешной сдачи международного экзамена HSK.</p>
+                <p>Такой курс может быть интересным и увлекательным для подростков, помогая им не только изучать язык, но и развивать культурное понимание.</p>
+
+            </div>
+        </div>
+        <div class="form__block" data-popap="popap3">
+            <div class="popap__close">×</div>
+            <div class="form__content">
+                <h2>Взрослым </h2>
+                <p>Эта программа для слушателей от 18 лет.  Главные цели курса:</p>
+                <ul class="list">
+                    <li>Развить навыки общения на китайском языке в различных ситуациях.</li>
+                    <li>Познакомить с культурными аспектами и бизнес-этикетом Китая.</li>
+                    <li>Подготовить к повседневному использованию языка или к поездкам в Китай.</li>
+                </ul>
             </div>
         </div>
     </div>
